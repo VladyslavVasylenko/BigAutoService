@@ -11,7 +11,7 @@ const translations = {
         addressTitle: "Наша адреса (відкрити карту)",
         contactsTitle: "Контакти",
         open: "Відчинено • Працюємо",
-        closed: "Зачинено • Відчимимося о 9:00"
+        closed: "Зачинено • Відчинимося о 9:00"
     },
     pl: {
         subtitle: "Warsztat | Wulkanizacja | Serwis | Wrocław",
