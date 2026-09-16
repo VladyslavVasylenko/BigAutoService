@@ -14,104 +14,99 @@
 </head>
 <body>
 
-    <!-- Top Navigation Bar for Desktop & Mobile -->
-    <header class="site-header">
-        <div class="header-content">
-            <div class="brand-mini">
-                <img src="1000048461.jpg" alt="Logo" class="mini-logo">
-                <span class="mini-title">BigAutoService</span>
-            </div>
-            <div class="controls">
-                <select id="langSelect" onchange="changeLanguage(this.value)">
-                    <option value="uk">🇺🇦 UA</option>
-                    <option value="pl">🇵🇱 PL</option>
-                    <option value="en">🇬🇧 EN</option>
-                    <option value="cs">🇨🇿 CS</option>
-                    <option value="ru">🇷🇺 RU</option>
-                </select>
-                <button class="icon-btn" onclick="toggleTheme()" id="themeToggleBtn" aria-label="Змінити тему">
-                    <i class="fa-solid fa-moon" id="themeIcon"></i>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <main class="main-container">
-        <!-- Left Column: Profile, Status & Address -->
-        <div class="left-column">
-            <!-- Profile Card -->
-            <div class="profile-card">
-                <div class="avatar-container">
-                    <img src="1000048461.jpg" alt="BigAutoService Logo" class="avatar-img">
-                </div>
-                <h1 class="profile-title">BigAutoService</h1>
-                <p class="profile-subtitle" data-translate="subtitle">СТО | Шиномонтаж | Автосервіс | Вроцлав</p>
-                
-                <!-- Live Status -->
-                <div class="status-badge" id="statusBadge">
-                    <span class="status-dot" id="statusDot"></span>
-                    <span id="statusText">Перевірка режиму...</span>
-                </div>
-            </div>
-
-            <!-- Address (Google Maps Link) -->
-            <a href="https://maps.google.com/?q=ul.+Waska+8,+Ligota+Piekna,+Wroclaw,+Poland+55-144" target="_blank" class="address-card">
-                <i class="fa-solid fa-location-dot"></i>
-                <div style="font-weight: 600;" data-translate="addressTitle">Наша адреса</div>
-                <div class="address-text">ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144</div>
-            </a>
+    <div class="page-wrapper">
+        <!-- Floating Controls (Language & Theme) for Mobile & Desktop -->
+        <div class="top-controls">
+            <select id="langSelect" onchange="changeLanguage(this.value)">
+                <option value="uk">🇺🇦 UA</option>
+                <option value="pl">🇵🇱 PL</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="cs">🇨🇿 CS</option>
+                <option value="ru">🇷🇺 RU</option>
+            </select>
+            <button class="icon-btn" onclick="toggleTheme()" id="themeToggleBtn" aria-label="Змінити тему">
+                <i class="fa-solid fa-moon" id="themeIcon"></i>
+            </button>
         </div>
 
-        <!-- Right Column: Services & Contacts -->
-        <div class="right-column">
-            <!-- Services Section -->
-            <section>
-                <h2 class="section-title" data-translate="servicesTitle">Наші послуги</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
-                        <div class="service-name" data-translate="srv1">Швидка допомога для авто</div>
+        <!-- Main Container -->
+        <main class="main-container">
+            <!-- Left Column (Profile & Address on PC) -->
+            <div class="left-column">
+                <!-- Profile Card -->
+                <div class="card profile-card">
+                    <div class="avatar-container">
+                        <img src="1000048461.jpg" alt="BigAutoService Logo" class="avatar-img">
                     </div>
-                    <div class="service-item">
-                        <div class="service-icon"><i class="fa-solid fa-dharmachakra"></i></div>
-                        <div class="service-name" data-translate="srv2">Шиномонтажні послуги</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-                        <div class="service-name" data-translate="srv3">Сервісна діагностика</div>
-                    </div>
-                    <div class="service-item">
-                        <div class="service-icon"><i class="fa-solid fa-oil-can"></i></div>
-                        <div class="service-name" data-translate="srv4">Технічне обслуговування</div>
-                    </div>
-                    <div class="service-item service-full">
-                        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
-                        <div class="service-name" data-translate="srv5">Комп'ютерна діагностика</div>
+                    <h1 class="profile-title">BigAutoService</h1>
+                    <p class="profile-subtitle" data-translate="subtitle">СТО | Шиномонтаж | Автосервіс | Вроцлав</p>
+                    
+                    <!-- Live Status -->
+                    <div class="status-badge" id="statusBadge">
+                        <span class="status-dot" id="statusDot"></span>
+                        <span id="statusText">Перевірка режиму...</span>
                     </div>
                 </div>
-            </section>
 
-            <!-- Quick Contacts -->
-            <section>
-                <h2 class="section-title" data-translate="contactsTitle">Контакти</h2>
-                <div class="action-buttons">
-                    <a href="tel:+48790295458" class="btn btn-primary">
-                        <i class="fa-solid fa-phone"></i> +48 790 295 458
-                    </a>
-                    <a href="https://t.me/+u0wQF_zzyqJmMDgy" target="_blank" class="btn btn-secondary">
-                        <i class="fa-brands fa-telegram"></i> Telegram Chat
-                    </a>
-                    <a href="https://www.instagram.com/wroclaw_sto.service" target="_blank" class="btn btn-secondary">
-                        <i class="fa-brands fa-instagram"></i> Instagram Profile
-                    </a>
-                </div>
-            </section>
-        </div>
-    </main>
+                <!-- Address Card -->
+                <a href="https://maps.app.goo.gl/Ub26HhrePcHnyiev6" target="_blank" class="card address-card">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div style="font-weight: 600;" data-translate="addressTitle">Наша адреса</div>
+                    <div class="address-text">ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144</div>
+                </a>
+            </div>
 
-    <footer>
-        &copy; 2026 BigAutoService Wrocław. All rights reserved.
-    </footer>
+            <!-- Right Column (Services & Contacts on PC) -->
+            <div class="right-column">
+                <!-- Services Section -->
+                <section class="section-block">
+                    <h2 class="section-title" data-translate="servicesTitle">Наші послуги</h2>
+                    <div class="services-grid">
+                        <div class="card service-item">
+                            <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                            <div class="service-name" data-translate="srv1">Швидка допомога для авто</div>
+                        </div>
+                        <div class="card service-item">
+                            <div class="service-icon"><i class="fa-solid fa-dharmachakra"></i></div>
+                            <div class="service-name" data-translate="srv2">Шиномонтажні послуги</div>
+                        </div>
+                        <div class="card service-item">
+                            <div class="service-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                            <div class="service-name" data-translate="srv3">Сервісна діагностика</div>
+                        </div>
+                        <div class="card service-item">
+                            <div class="service-icon"><i class="fa-solid fa-oil-can"></i></div>
+                            <div class="service-name" data-translate="srv4">Технічне обслуговування</div>
+                        </div>
+                        <div class="card service-item service-full">
+                            <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <div class="service-name" data-translate="srv5">Комп'ютерна діагностика</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Quick Contacts -->
+                <section class="section-block">
+                    <h2 class="section-title" data-translate="contactsTitle">Контакти</h2>
+                    <div class="action-buttons">
+                        <a href="tel:+48790295458" class="btn btn-primary">
+                            <i class="fa-solid fa-phone"></i> +48 790 295 458
+                        </a>
+                        <a href="https://t.me/+u0wQF_zzyqJmMDgy" target="_blank" class="btn btn-secondary">
+                            <i class="fa-brands fa-telegram"></i> Telegram Chat
+                        </a>
+                        <a href="https://www.instagram.com/wroclaw_sto.service" target="_blank" class="btn btn-secondary">
+                            <i class="fa-brands fa-instagram"></i> Instagram Profile
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            &copy; 2026 BigAutoService Wrocław. All rights reserved.
+        </footer>
+    </div>
 
     <!-- Script File -->
     <script src="script.js"></script>
