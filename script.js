@@ -90,67 +90,26 @@ function changeLanguage(lang) {
     updateWorkingStatus();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    const menuToggleBtn = document.getElementById('menuToggleBtn');
-    const menuCloseBtn = document.getElementById('menuCloseBtn');
-    const dropdownMenu = document.getElementById('dropdownMenu');
+// Global Toggle Menu function
+function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
     const gearIcon = document.getElementById('gearIcon');
-    const themeToggleBtn = document.getElementById('themeToggleBtn');
-    const menuLinks = document.querySelectorAll('.menu-link-item');
+    menu.classList.toggle('open');
+    gearIcon.classList.toggle('rotate');
+}
 
-    function toggleMenu() {
-        dropdownMenu.classList.toggle('open');
-        gearIcon.classList.toggle('rotate');
+// Theme Toggle
+function toggleTheme() {
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('themeIcon');
+    if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        themeIcon.className = 'fa-solid fa-sun';
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        themeIcon.className = 'fa-solid fa-moon';
     }
-
-    if (menuToggleBtn) {
-        menuToggleBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
-    }
-
-    if (menuCloseBtn) {
-        menuCloseBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleMenu();
-        });
-    }
-
-    // Заккриття меню при кліку на посилання навігації всередині нього
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            dropdownMenu.classList.remove('open');
-            gearIcon.classList.remove('rotate');
-        });
-    });
-
-    // Закриття меню при кліку за його межами
-    document.addEventListener('click', (e) => {
-        if (!dropdownMenu.contains(e.target) && !menuToggleBtn.contains(e.target)) {
-            dropdownMenu.classList.remove('open');
-            gearIcon.classList.remove('rotate');
-        }
-    });
-
-    // Theme Toggle
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', () => {
-            const html = document.documentElement;
-            const themeIcon = document.getElementById('themeIcon');
-            if (html.getAttribute('data-theme') === 'dark') {
-                html.setAttribute('data-theme', 'light');
-                themeIcon.className = 'fa-solid fa-sun';
-            } else {
-                html.setAttribute('data-theme', 'dark');
-                themeIcon.className = 'fa-solid fa-moon';
-            }
-        });
-    }
-
-    updateWorkingStatus();
-    setInterval(updateWorkingStatus, 60000);
-});
+}
 
 // Real-time Working Hours Checker (Poland time / Wrocław)
 function updateWorkingStatus() {
@@ -188,3 +147,6 @@ function updateWorkingStatus() {
         }
     }
 }
+
+updateWorkingStatus();
+setInterval(updateWorkingStatus, 60000);
