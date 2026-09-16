@@ -40,7 +40,7 @@ body {
 
 .page-wrapper {
     width: 100%;
-    max-width: 520px; /* Ідеальна центрована ширина для мобільних, планшетів і ПК */
+    max-width: 520px;
     margin: 0 auto;
     padding: 16px;
     display: flex;
