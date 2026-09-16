@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BigAutoService | СТО Вроцлав</title>
+    <!-- Favicon (значок сайту у вкладці) -->
+    <link rel="icon" type="image/jpeg" href="1000048461.jpg">
     <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -15,6 +17,10 @@
     <div class="container">
         <!-- Top Bar with Theme & Language -->
         <div class="top-bar">
+            <div class="brand-mini">
+                <img src="1000048461.jpg" alt="Logo" class="mini-logo">
+                <span class="mini-title">BigAutoService</span>
+            </div>
             <div class="controls">
                 <select id="langSelect" onchange="changeLanguage(this.value)">
                     <option value="uk">🇺🇦 UA</option>
@@ -23,18 +29,17 @@
                     <option value="cs">🇨🇿 CS</option>
                     <option value="ru">🇷🇺 RU</option>
                 </select>
+                <button class="icon-btn" onclick="toggleTheme()" id="themeToggleBtn" aria-label="Змінити тему">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
             </div>
-            <button class="icon-btn" onclick="toggleTheme()" id="themeToggleBtn" aria-label="Змінити тему">
-                <i class="fa-solid fa-moon" id="themeIcon"></i>
-            </button>
         </div>
 
         <!-- Profile Header -->
         <div class="profile-card">
             <div class="avatar-container">
-                <div class="avatar">
-                    <i class="fa-solid fa-car-wrench"></i>
-                </div>
+                <!-- Використано ваше реальне зображення з покращеним відображенням -->
+                <img src="1000048461.jpg" alt="BigAutoService Logo" class="avatar-img">
             </div>
             <h1 class="profile-title">BigAutoService</h1>
             <p class="profile-subtitle" data-translate="subtitle">СТО | Шиномонтаж | Автосервіс | Вроцлав</p>
@@ -101,4 +106,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
