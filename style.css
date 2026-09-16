@@ -38,6 +38,12 @@ body {
     align-items: center;
 }
 
+/* Заборона скролу при відкритому меню */
+body.menu-open {
+    overflow: hidden;
+    height: 100vh;
+}
+
 .page-wrapper {
     width: 100%;
     max-width: 520px;
@@ -48,8 +54,14 @@ body {
     gap: 16px;
 }
 
-/* Top Navigation Bar with Gear Button */
+/* Fixed Top Navigation Bar */
 .top-nav {
+    position: fixed;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 32px);
+    max-width: 520px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,8 +70,7 @@ body {
     padding: 12px 18px;
     border-radius: 18px;
     box-shadow: var(--shadow);
-    position: relative;
-    z-index: 50;
+    z-index: 100;
 }
 
 .brand-mini {
@@ -68,6 +79,8 @@ body {
     gap: 10px;
     font-size: 15px;
     font-weight: 700;
+    cursor: pointer;
+    user-select: none;
 }
 
 .brand-mini img {
@@ -101,7 +114,7 @@ body {
 /* Dropdown Menu (Gear panel) */
 .dropdown-menu {
     position: fixed;
-    top: 76px;
+    top: 86px;
     left: 50%;
     transform: translateX(-50%) scale(0.95);
     width: calc(100% - 32px);
@@ -117,7 +130,7 @@ body {
     opacity: 0;
     pointer-events: none;
     transition: all 0.3s ease;
-    z-index: 100;
+    z-index: 101;
 }
 
 .dropdown-menu.open {
@@ -202,12 +215,13 @@ select, .icon-btn {
     border-radius: 50%;
 }
 
-/* Main Container Layout */
+/* Main Container Layout (З відступом зверху під закріплену панель) */
 .main-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
+    margin-top: 70px;
 }
 
 /* Cards General Style */
