@@ -1,6 +1,7 @@
 // Translations Dictionary
 const translations = {
     uk: {
+        menuTitle: "Меню навігації",
         subtitle: "СТО | Шиномонтаж | Автосервіс | Вроцлав",
         servicesTitle: "Наші послуги",
         srv1: "Швидка допомога для авто",
@@ -8,12 +9,14 @@ const translations = {
         srv3: "Сервісна діагностика",
         srv4: "Технічне обслуговування",
         srv5: "Комп'ютерна діагностика",
+        srv6: "Заправка кондиціонеру",
         addressTitle: "Наша адреса",
         contactsTitle: "Контакти",
         open: "Відчинено • Працюємо",
         closed: "Зачинено • Відчинимося о 9:00"
     },
     pl: {
+        menuTitle: "Menu nawigacji",
         subtitle: "Warsztat | Wulkanizacja | Serwis | Wrocław",
         servicesTitle: "Nasze usługi",
         srv1: "Pomoc drogowa dla auta",
@@ -21,12 +24,14 @@ const translations = {
         srv3: "Diagnostyka serwisowa",
         srv4: "Przeglądy techniczne",
         srv5: "Diagnostyka komputerowa",
+        srv6: "Napełnianie klimatyzacji",
         addressTitle: "Nasz adres",
         contactsTitle: "Kontakty",
         open: "Otwarte • Pracujemy",
         closed: "Zamknięte • Otwieramy o 9:00"
     },
     en: {
+        menuTitle: "Navigation Menu",
         subtitle: "Car Service | Tire Fitting | Wrocław",
         servicesTitle: "Our Services",
         srv1: "Roadside assistance",
@@ -34,12 +39,14 @@ const translations = {
         srv3: "Service diagnostics",
         srv4: "Maintenance & repairs",
         srv5: "Computer diagnostics",
+        srv6: "AC recharging",
         addressTitle: "Our address",
         contactsTitle: "Contacts",
         open: "Open • Working now",
         closed: "Closed • Opens at 9:00"
     },
     cs: {
+        menuTitle: "Navigační menu",
         subtitle: "Autoservis | Pneuservis | Vratislav",
         servicesTitle: "Naše služby",
         srv1: "Silniční pomoc",
@@ -47,12 +54,14 @@ const translations = {
         srv3: "Servisní diagnostika",
         srv4: "Technická údržba",
         srv5: "Počítačová diagnostika",
+        srv6: "Plnění klimatizace",
         addressTitle: "Naše adresa",
         contactsTitle: "Kontakty",
         open: "Otevřeno • Pracujeme",
         closed: "Zavřeno • Otevíráme v 9:00"
     },
     ru: {
+        menuTitle: "Меню навигации",
         subtitle: "СТО | Шиномонтаж | Автосервис | Вроцлав",
         servicesTitle: "Наши услуги",
         srv1: "Быстрая помощь для авто",
@@ -60,6 +69,7 @@ const translations = {
         srv3: "Сервисная диагностика",
         srv4: "Техническое обслуживание",
         srv5: "Компьютерная диагностика",
+        srv6: "Заправка кондиционера",
         addressTitle: "Наш адрес",
         contactsTitle: "Контакты",
         open: "Открыто • Работаем",
@@ -78,6 +88,14 @@ function changeLanguage(lang) {
         }
     });
     updateWorkingStatus();
+}
+
+// Toggle Dropdown Menu & Gear Rotation
+function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    const gearBtn = document.getElementById('menuToggleBtn');
+    menu.classList.toggle('open');
+    gearBtn.classList.toggle('rotate');
 }
 
 // Theme Toggle
