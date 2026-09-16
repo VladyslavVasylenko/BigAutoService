@@ -90,12 +90,24 @@ function changeLanguage(lang) {
     updateWorkingStatus();
 }
 
-// Global Toggle Menu function
+// Global Toggle Menu function & Scroll Lock
 function toggleMenu() {
     const menu = document.getElementById('dropdownMenu');
     const gearIcon = document.getElementById('gearIcon');
+    
     menu.classList.toggle('open');
     gearIcon.classList.toggle('rotate');
+    
+    // Блокування / розблокування скролу сторінки
+    document.body.classList.toggle('menu-open', menu.classList.contains('open'));
+}
+
+// Scroll to top function when clicking brand logo
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
 }
 
 // Theme Toggle
