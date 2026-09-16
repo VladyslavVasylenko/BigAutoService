@@ -113,7 +113,6 @@ function updateWorkingStatus() {
         if (p.type === 'hour') hour = parseInt(p.value, 10);
     });
 
-    // Working hours: Mon-Sat from 9:00 to 18:00 (Sunday closed)
     const isWorkingDay = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].includes(weekday);
     const isWorkingHours = hour >= 9 && hour < 18;
 
@@ -129,6 +128,5 @@ function updateWorkingStatus() {
     }
 }
 
-// Initialize status check on load and every minute
 updateWorkingStatus();
 setInterval(updateWorkingStatus, 60000);
