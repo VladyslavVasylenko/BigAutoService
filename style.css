@@ -6,7 +6,6 @@
     --accent-color: #ef4444;
     --accent-hover: #dc2626;
     --border-color: #2b303b;
-    --header-bg: rgba(24, 27, 34, 0.85);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -18,7 +17,6 @@
     --accent-color: #e11d48;
     --accent-hover: #be123c;
     --border-color: #e5e7eb;
-    --header-bg: rgba(255, 255, 255, 0.85);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -39,63 +37,35 @@ body {
     align-items: center;
 }
 
-/* Header */
-.site-header {
+.page-wrapper {
     width: 100%;
-    background: var(--header-bg);
-    border-bottom: 1px solid var(--border-color);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    backdrop-filter: blur(10px);
+    max-width: 480px; /* Мобільна база за замовчуванням */
+    margin: 0 auto;
+    padding: 16px;
     display: flex;
-    justify-content: center;
-    padding: 12px 20px;
+    flex-direction: column;
+    gap: 16px;
 }
 
-.header-content {
-    width: 100%;
-    max-width: 1100px;
+/* Top Controls (Language & Theme) */
+.top-controls {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.brand-mini {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.mini-logo {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid var(--accent-color);
-}
-
-.mini-title {
-    font-size: 16px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
-
-.controls {
-    display: flex;
+    justify-content: flex-end;
     gap: 10px;
     align-items: center;
+    width: 100%;
 }
 
 select, .icon-btn {
-    background: var(--bg-color);
+    background: var(--card-bg);
     color: var(--text-color);
     border: 1px solid var(--border-color);
     padding: 8px 12px;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 14px;
     cursor: pointer;
     outline: none;
+    box-shadow: var(--shadow);
 }
 
 .icon-btn {
@@ -107,44 +77,39 @@ select, .icon-btn {
     border-radius: 50%;
 }
 
-/* Main Container Layout (Responsive Grid) */
+/* Main Container Layout (Mobile first: stacked) */
 .main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
     width: 100%;
-    max-width: 1100px;
-    padding: 24px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    flex: 1;
 }
 
-/* Left & Right Columns */
-.left-column {
+.left-column, .right-column {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
+    width: 100%;
 }
 
-.right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+/* Cards General Style */
+.card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
 }
 
 /* Profile Card */
 .profile-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
     padding: 30px 20px;
     text-align: center;
-    box-shadow: var(--shadow);
 }
 
 .avatar-container {
     position: relative;
-    width: 120px;
-    height: 120px;
+    width: 110px;
+    height: 110px;
     margin: 0 auto 16px;
 }
 
@@ -164,9 +129,9 @@ select, .icon-btn {
 }
 
 .profile-subtitle {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-muted);
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 /* Status Badge */
@@ -176,15 +141,15 @@ select, .icon-btn {
     gap: 8px;
     padding: 8px 16px;
     border-radius: 20px;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 600;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--border-color);
 }
 
 .status-dot {
-    width: 10px;
-    height: 10px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
 }
 
@@ -198,56 +163,83 @@ select, .icon-btn {
     box-shadow: 0 0 10px #ef4444;
 }
 
-/* Services Section */
-.section-title {
-    font-size: 15px;
-    font-weight: 700;
-    margin-bottom: 14px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+/* Address Card */
+.address-card {
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color: var(--text-color);
 }
 
-.services-grid {
-    display: grid;
-    grid-template-columns: 1fr;
+.address-card:hover {
+    border-color: var(--accent-color);
+}
+
+.address-card i {
+    color: var(--accent-color);
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.address-text {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 6px;
+}
+
+/* Sections */
+.section-block {
+    display: flex;
+    flex-direction: column;
     gap: 12px;
 }
 
+.section-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding-left: 4px;
+}
+
+.services-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .service-item {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 16px 20px;
+    padding: 15px 18px;
     display: flex;
     align-items: center;
-    gap: 16px;
-    box-shadow: var(--shadow);
+    gap: 14px;
 }
 
 .service-icon {
-    font-size: 20px;
-    width: 42px;
-    height: 42px;
+    font-size: 18px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(239, 68, 68, 0.1);
     color: var(--accent-color);
-    border-radius: 12px;
+    border-radius: 10px;
     flex-shrink: 0;
 }
 
 .service-name {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
 }
 
 /* Actions / Links */
 .action-buttons {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .btn {
@@ -255,9 +247,9 @@ select, .icon-btn {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 16px 20px;
-    border-radius: 14px;
-    font-size: 16px;
+    padding: 15px 20px;
+    border-radius: 16px;
+    font-size: 15px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -284,57 +276,33 @@ select, .icon-btn {
     border-color: var(--accent-color);
 }
 
-/* Address Block */
-.address-card {
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    text-decoration: none;
-    display: block;
-    color: var(--text-color);
-}
-
-.address-card:hover {
-    border-color: var(--accent-color);
-}
-
-.address-card i {
-    color: var(--accent-color);
-    font-size: 24px;
-    margin-bottom: 8px;
-}
-
-.address-text {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-top: 6px;
-}
-
 footer {
     text-align: center;
-    font-size: 13px;
+    font-size: 12px;
     color: var(--text-muted);
-    padding: 20px;
-    border-top: 1px solid var(--border-color);
-    width: 100%;
-    margin-top: 20px;
+    padding: 10px 0;
+    margin-top: auto;
 }
 
-/* ================= DESKTOP & TABLET ADAPTIVE (PC / Laptop) ================= */
+/* ================= PC & TABLET ADAPTIVE (min 768px) ================= */
 @media (min-width: 768px) {
+    .page-wrapper {
+        max-width: 1050px; /* Розгортаємо ширину для ПК */
+        padding: 30px 20px;
+        gap: 24px;
+    }
+
     .main-container {
         display: grid;
-        grid-template-columns: 360px 1fr;
-        gap: 30px;
+        grid-template-columns: 340px 1fr;
+        gap: 24px;
         align-items: start;
-        padding: 40px 20px;
     }
 
     .services-grid {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
     }
 
     .service-full {
@@ -342,6 +310,8 @@ footer {
     }
 
     .action-buttons {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
     }
 }
