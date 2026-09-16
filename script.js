@@ -8,7 +8,7 @@ const translations = {
         srv3: "Сервісна діагностика",
         srv4: "Технічне обслуговування",
         srv5: "Комп'ютерна діагностика",
-        addressTitle: "Наша адреса (відкрити карту)",
+        addressTitle: "Наша адреса",
         contactsTitle: "Контакти",
         open: "Відчинено • Працюємо",
         closed: "Зачинено • Відчинимося о 9:00"
@@ -21,7 +21,7 @@ const translations = {
         srv3: "Diagnostyka serwisowa",
         srv4: "Przeglądy techniczne",
         srv5: "Diagnostyka komputerowa",
-        addressTitle: "Nasz adres (otwórz mapę)",
+        addressTitle: "Nasz adres",
         contactsTitle: "Kontakty",
         open: "Otwarte • Pracujemy",
         closed: "Zamknięte • Otwieramy o 9:00"
@@ -34,7 +34,7 @@ const translations = {
         srv3: "Service diagnostics",
         srv4: "Maintenance & repairs",
         srv5: "Computer diagnostics",
-        addressTitle: "Our address (open map)",
+        addressTitle: "Our address",
         contactsTitle: "Contacts",
         open: "Open • Working now",
         closed: "Closed • Opens at 9:00"
@@ -47,7 +47,7 @@ const translations = {
         srv3: "Servisní diagnostika",
         srv4: "Technická údržba",
         srv5: "Počítačová diagnostika",
-        addressTitle: "Naše adresa (otevřít mapu)",
+        addressTitle: "Naše adresa",
         contactsTitle: "Kontakty",
         open: "Otevřeno • Pracujeme",
         closed: "Zavřeno • Otevíráme v 9:00"
@@ -60,7 +60,7 @@ const translations = {
         srv3: "Сервисная диагностика",
         srv4: "Техническое обслуживание",
         srv5: "Компьютерная диагностика",
-        addressTitle: "Наш адрес (открыть карту)",
+        addressTitle: "Наш адрес",
         contactsTitle: "Контакты",
         open: "Открыто • Работаем",
         closed: "Закрыто • Откроемся в 9:00"
