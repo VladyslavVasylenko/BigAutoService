@@ -6,7 +6,7 @@
     --accent-color: #ef4444;
     --accent-hover: #dc2626;
     --border-color: #2b303b;
-    --header-bg: rgba(15, 17, 21, 0.85);
+    --header-bg: rgba(24, 27, 34, 0.85);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -18,7 +18,7 @@
     --accent-color: #e11d48;
     --accent-hover: #be123c;
     --border-color: #e5e7eb;
-    --header-bg: rgba(244, 246, 248, 0.85);
+    --header-bg: rgba(255, 255, 255, 0.85);
     --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -37,54 +37,53 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px 10px 40px 10px;
 }
 
-.container {
+/* Header */
+.site-header {
     width: 100%;
-    max-width: 520px;
-    padding: 0 12px;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    padding: 12px 20px;
 }
 
-/* Top Bar */
-.top-bar {
+.header-content {
+    width: 100%;
+    max-width: 1100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
-    background: var(--card-bg);
-    padding: 10px 16px;
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    box-shadow: var(--shadow);
-    position: sticky;
-    top: 10px;
-    z-index: 100;
-    backdrop-filter: blur(10px);
 }
 
 .brand-mini {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .mini-logo {
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
     object-fit: cover;
-    border: 1px solid var(--accent-color);
+    border: 2px solid var(--accent-color);
 }
 
 .mini-title {
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
 }
 
 .controls {
     display: flex;
-    gap: 8px;
+    gap: 10px;
     align-items: center;
 }
 
@@ -92,37 +91,60 @@ select, .icon-btn {
     background: var(--bg-color);
     color: var(--text-color);
     border: 1px solid var(--border-color);
-    padding: 6px 10px;
-    border-radius: 8px;
-    font-size: 13px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 14px;
     cursor: pointer;
     outline: none;
 }
 
 .icon-btn {
-    width: 34px;
-    height: 34px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
 }
 
-/* Profile Header */
+/* Main Container Layout (Responsive Grid) */
+.main-container {
+    width: 100%;
+    max-width: 1100px;
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    flex: 1;
+}
+
+/* Left & Right Columns */
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Profile Card */
 .profile-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
     border-radius: 20px;
-    padding: 28px 16px;
+    padding: 30px 20px;
     text-align: center;
     box-shadow: var(--shadow);
-    margin-bottom: 16px;
 }
 
 .avatar-container {
     position: relative;
-    width: 110px;
-    height: 110px;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 16px;
 }
 
@@ -132,13 +154,11 @@ select, .icon-btn {
     border-radius: 50%;
     border: 3px solid var(--accent-color);
     object-fit: cover;
-    box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
-    /* Поліпшення якості рендерингу растрового зображення */
-    image-rendering: -webkit-optimize-contrast;
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
 }
 
 .profile-title {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 800;
     margin-bottom: 6px;
 }
@@ -146,7 +166,7 @@ select, .icon-btn {
 .profile-subtitle {
     font-size: 14px;
     color: var(--text-muted);
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 /* Status Badge */
@@ -154,9 +174,9 @@ select, .icon-btn {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 6px 14px;
+    padding: 8px 16px;
     border-radius: 20px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--border-color);
@@ -182,55 +202,52 @@ select, .icon-btn {
 .section-title {
     font-size: 15px;
     font-weight: 700;
-    margin-bottom: 12px;
-    padding-left: 4px;
+    margin-bottom: 14px;
     color: var(--text-muted);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 
-.services-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
+.services-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
 }
 
 .service-item {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 14px;
-    padding: 14px 16px;
+    border-radius: 16px;
+    padding: 16px 20px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     box-shadow: var(--shadow);
 }
 
 .service-icon {
-    font-size: 18px;
-    width: 36px;
-    height: 36px;
+    font-size: 20px;
+    width: 42px;
+    height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: rgba(239, 68, 68, 0.1);
     color: var(--accent-color);
-    border-radius: 10px;
+    border-radius: 12px;
     flex-shrink: 0;
 }
 
 .service-name {
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 /* Actions / Links */
 .action-buttons {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 12px;
-    margin-bottom: 20px;
 }
 
 .btn {
@@ -238,9 +255,9 @@ select, .icon-btn {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 14px 20px;
+    padding: 16px 20px;
     border-radius: 14px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     cursor: pointer;
@@ -271,10 +288,9 @@ select, .icon-btn {
 .address-card {
     background: var(--card-bg);
     border: 1px solid var(--border-color);
-    border-radius: 16px;
-    padding: 16px;
+    border-radius: 20px;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
     box-shadow: var(--shadow);
     text-decoration: none;
     display: block;
@@ -287,29 +303,45 @@ select, .icon-btn {
 
 .address-card i {
     color: var(--accent-color);
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 8px;
 }
 
 .address-text {
     font-size: 14px;
     color: var(--text-muted);
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 footer {
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
     color: var(--text-muted);
-    margin-top: 15px;
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    margin-top: 20px;
 }
 
-/* Адаптивність для планшетів та ПК (зберігає центральний акуратний вигляд card-style) */
+/* ================= DESKTOP & TABLET ADAPTIVE (PC / Laptop) ================= */
 @media (min-width: 768px) {
-    body {
-        padding-top: 40px;
+    .main-container {
+        display: grid;
+        grid-template-columns: 360px 1fr;
+        gap: 30px;
+        align-items: start;
+        padding: 40px 20px;
     }
-    .container {
-        max-width: 540px;
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-full {
+        grid-column: span 2;
+    }
+
+    .action-buttons {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
