@@ -21,7 +21,7 @@
                 <img src="1000048461.jpg" alt="Logo">
                 <span>BigAutoService</span>
             </div>
-            <button class="gear-btn" id="menuToggleBtn" onclick="toggleMenu()" aria-label="Меню">
+            <button class="gear-btn" id="menuToggleBtn" aria-label="Меню">
                 <i class="fa-solid fa-gear" id="gearIcon"></i>
             </button>
         </header>
@@ -30,12 +30,12 @@
         <div class="dropdown-menu" id="dropdownMenu">
             <div class="menu-header">
                 <span class="menu-title" data-translate="menuTitle">Навігація</span>
-                <button class="close-btn" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
+                <button class="close-btn" id="menuCloseBtn" aria-label="Закрити"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="menu-links">
-                <a href="#servicesBlock" onclick="toggleMenu()"><i class="fa-solid fa-screwdriver-wrench"></i> <span data-translate="servicesTitle">Наші послуги</span></a>
-                <a href="#addressBlock" onclick="toggleMenu()"><i class="fa-solid fa-location-dot"></i> <span data-translate="addressTitle">Наша адреса</span></a>
-                <a href="#contactsBlock" onclick="toggleMenu()"><i class="fa-solid fa-address-book"></i> <span data-translate="contactsTitle">Контакти</span></a>
+                <a href="#servicesBlock" class="menu-link-item"><i class="fa-solid fa-screwdriver-wrench"></i> <span data-translate="servicesTitle">Наші послуги</span></a>
+                <a href="#addressBlock" class="menu-link-item"><i class="fa-solid fa-location-dot"></i> <span data-translate="addressTitle">Наша адреса</span></a>
+                <a href="#contactsBlock" class="menu-link-item"><i class="fa-solid fa-address-book"></i> <span data-translate="contactsTitle">Контакти</span></a>
             </div>
             <div class="menu-footer-controls">
                 <select id="langSelect" onchange="changeLanguage(this.value)">
@@ -45,7 +45,7 @@
                     <option value="cs">🇨🇿 CS</option>
                     <option value="ru">🇷🇺 RU</option>
                 </select>
-                <button class="icon-btn" onclick="toggleTheme()" id="themeToggleBtn" aria-label="Змінити тему">
+                <button class="icon-btn" id="themeToggleBtn" aria-label="Змінити тему">
                     <i class="fa-solid fa-moon" id="themeIcon"></i>
                 </button>
             </div>
