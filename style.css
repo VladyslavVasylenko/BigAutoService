@@ -248,6 +248,14 @@ select, .icon-btn {
     box-shadow: 0 0 20px rgba(34, 197, 94, 0.25);
 }
 
+/* Підсвічування кнопок у блоці контактів */
+.section-block.highlight-block .btn-primary,
+.section-block.highlight-block .btn-secondary {
+    border-color: #22c55e !important;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3) !important;
+}
+
+
 /* Cards General Style */
 .card {
     background: var(--card-bg);
