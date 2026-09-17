@@ -33,9 +33,9 @@
                 <button class="close-btn" onclick="toggleMenu()" aria-label="Закрити"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="menu-links">
-                <a href="#servicesBlock" onclick="toggleMenu()"><i class="fa-solid fa-screwdriver-wrench"></i> <span data-translate="servicesTitle">Наші послуги</span></a>
-                <a href="#addressBlock" onclick="toggleMenu()"><i class="fa-solid fa-location-dot"></i> <span data-translate="addressTitle">Наша адреса</span></a>
-                <a href="#contactsBlock" onclick="toggleMenu()"><i class="fa-solid fa-address-book"></i> <span data-translate="contactsTitle">Контакти</span></a>
+                <a href="#servicesBlock" onclick="handleMenuClick('servicesBlock')"><i class="fa-solid fa-screwdriver-wrench"></i> <span data-translate="servicesTitle">Послуги</span></a>
+                <a href="#addressBlock" onclick="handleMenuClick('addressBlock')"><i class="fa-solid fa-location-dot"></i> <span data-translate="addressTitle">Адреса</span></a>
+                <a href="#contactsBlock" onclick="handleMenuClick('contactsBlock')"><i class="fa-solid fa-address-book"></i> <span data-translate="contactsTitle">Контакти</span></a>
             </div>
             <div class="menu-footer-controls">
                 <select id="langSelect" onchange="changeLanguage(this.value)">
@@ -70,7 +70,7 @@
 
             <!-- Services Section -->
             <section class="section-block" id="servicesBlock">
-                <h2 class="section-title" data-translate="servicesTitle">Наші послуги</h2>
+                <h2 class="section-title" data-translate="servicesTitle">Послуги</h2>
                 <div class="services-list">
                     <div class="card service-item">
                         <div class="service-icon"><i class="fa-solid fa-truck-fast"></i></div>
@@ -101,7 +101,7 @@
 
             <!-- Address Card -->
             <section class="section-block" id="addressBlock">
-                <h2 class="section-title" data-translate="addressTitle">Наша адреса</h2>
+                <h2 class="section-title" data-translate="addressTitle">Адреса</h2>
                 <a href="https://maps.app.goo.gl/Ub26HhrePcHnyiev6" target="_blank" class="card address-card">
                     <i class="fa-solid fa-location-dot"></i>
                     <div class="address-text">ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144</div>
