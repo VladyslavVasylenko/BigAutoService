@@ -215,13 +215,37 @@ select, .icon-btn {
     border-radius: 50%;
 }
 
-/* Main Container Layout (З відступом зверху під закріплену панель) */
+/* Main Container Layout */
 .main-container {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
     margin-top: 70px;
+}
+
+/* Захист від перекриття шапкою при переході по якірях */
+.section-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    scroll-margin-top: 90px;
+}
+
+/* Зелене підсвічування блоку при виборі з меню */
+.section-block.highlight-block {
+    transition: all 0.5s ease;
+}
+
+.section-block.highlight-block .section-title {
+    color: #22c55e !important;
+    text-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
+}
+
+.section-block.highlight-block .card,
+.section-block.highlight-block .address-card {
+    border-color: #22c55e !important;
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.25);
 }
 
 /* Cards General Style */
@@ -293,13 +317,6 @@ select, .icon-btn {
 .status-dot.closed {
     background-color: #ef4444;
     box-shadow: 0 0 10px #ef4444;
-}
-
-/* Sections */
-.section-block {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
 }
 
 .section-title {
