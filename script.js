@@ -3,14 +3,14 @@ const translations = {
     uk: {
         menuTitle: "Меню навігації",
         subtitle: "СТО | Шиномонтаж | Автосервіс | Вроцлав",
-        servicesTitle: "Наші послуги",
+        servicesTitle: "Послуги",
         srv1: "Швидка допомога для авто",
         srv2: "Шиномонтажні послуги",
         srv3: "Сервісна діагностика",
         srv4: "Технічне обслуговування",
         srv5: "Комп'ютерна діагностика",
         srv6: "Заправка кондиціонеру",
-        addressTitle: "Наша адреса",
+        addressTitle: "Адреса",
         contactsTitle: "Контакти",
         open: "Відчинено • Працюємо",
         closed: "Зачинено • Відчинимося о 9:00"
@@ -18,14 +18,14 @@ const translations = {
     pl: {
         menuTitle: "Menu nawigacji",
         subtitle: "Warsztat | Wulkanizacja | Serwis | Wrocław",
-        servicesTitle: "Nasze usługi",
+        servicesTitle: "Usługi",
         srv1: "Pomoc drogowa dla auta",
         srv2: "Usługi wulkanizacyjne",
         srv3: "Diagnostyka serwisowa",
         srv4: "Przeglądy techniczne",
         srv5: "Diagnostyka komputerowa",
         srv6: "Napełnianie klimatyzacji",
-        addressTitle: "Nasz adres",
+        addressTitle: "Adres",
         contactsTitle: "Kontakty",
         open: "Otwarte • Pracujemy",
         closed: "Zamknięte • Otwieramy o 9:00"
@@ -33,14 +33,14 @@ const translations = {
     en: {
         menuTitle: "Navigation Menu",
         subtitle: "Car Service | Tire Fitting | Wrocław",
-        servicesTitle: "Our Services",
+        servicesTitle: "Services",
         srv1: "Roadside assistance",
         srv2: "Tire fitting services",
         srv3: "Service diagnostics",
         srv4: "Maintenance & repairs",
         srv5: "Computer diagnostics",
         srv6: "AC recharging",
-        addressTitle: "Our address",
+        addressTitle: "Address",
         contactsTitle: "Contacts",
         open: "Open • Working now",
         closed: "Closed • Opens at 9:00"
@@ -48,14 +48,14 @@ const translations = {
     cs: {
         menuTitle: "Navigační menu",
         subtitle: "Autoservis | Pneuservis | Vratislav",
-        servicesTitle: "Naše služby",
+        servicesTitle: "Služby",
         srv1: "Silniční pomoc",
         srv2: "Pneuservis",
         srv3: "Servisní diagnostika",
         srv4: "Technická údržba",
         srv5: "Počítačová diagnostika",
         srv6: "Plnění klimatizace",
-        addressTitle: "Naše adresa",
+        addressTitle: "Adresa",
         contactsTitle: "Kontakty",
         open: "Otevřeno • Pracujeme",
         closed: "Zavřeno • Otevíráme v 9:00"
@@ -63,14 +63,14 @@ const translations = {
     ru: {
         menuTitle: "Меню навигации",
         subtitle: "СТО | Шиномонтаж | Автосервис | Вроцлав",
-        servicesTitle: "Наши услуги",
+        servicesTitle: "Услуги",
         srv1: "Быстрая помощь для авто",
         srv2: "Шиномонтажные услуги",
         srv3: "Сервисная діагностика",
         srv4: "Техническое обслуживание",
         srv5: "Компьютерная диагностика",
         srv6: "Заправка кондиционера",
-        addressTitle: "Наш адрес",
+        addressTitle: "Адрес",
         contactsTitle: "Контакты",
         open: "Открыто • Работаем",
         closed: "Закрыто • Откроемся в 9:00"
@@ -100,6 +100,25 @@ function toggleMenu() {
     
     // Блокування / розблокування скролу сторінки
     document.body.classList.toggle('menu-open', menu.classList.contains('open'));
+}
+
+// Handler for menu items: close menu, scroll smoothly, highlight block for 3 seconds
+function handleMenuClick(blockId) {
+    toggleMenu();
+    
+    const block = document.getElementById(blockId);
+    if (block) {
+        // Remove highlight from any other block first
+        document.querySelectorAll('.section-block').forEach(b => b.classList.remove('highlight-block'));
+        
+        // Add highlight
+        block.classList.add('highlight-block');
+        
+        // Remove highlight after 3 seconds
+        setTimeout(() => {
+            block.classList.remove('highlight-block');
+        }, 3000);
+    }
 }
 
 // Scroll to top function when clicking brand logo
