@@ -1,13 +1,13 @@
 // Translations object for 5 languages
 const translations = {
     uk: {
-        subtitle: "Автосервіс • Вроцлав",
+        subtitle: "СТО | Шиномонтаж | Автосервіс | Вроцлав",
         open: "Відчинено • Працюємо",
         closed: "Зачинено",
         opensMonday: "Відкриється в понеділок о 9:00",
         opensToday: "Відкриється сьогодні о 9:00",
         opensTomorrow: "Відкриється завтра о 9:00",
-        servicesTitle: "Наші послуги",
+        servicesTitle: "Послуги",
         service1: "Швидка допомога для авто",
         service2: "Шиномонтажні послуги",
         service3: "Сервісна діагностика",
@@ -15,114 +15,93 @@ const translations = {
         service5: "Комп'ютерна діагностика",
         service6: "Заправка кондиціонеру",
         addressTitle: "Адреса",
-        addressText: "ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144",
-        contactsTitle: "Контакти",
-        callBtn: "Зателефонувати",
-        telegramBtn: "Telegram",
-        instagramBtn: "Instagram",
-        menuServices: "Послуги",
-        menuAddress: "Адреса",
-        menuContacts: "Контакти"
+        contactsTitle: "Контакти"
     },
     pl: {
-        subtitle: "Autoserwis • Wrocław",
+        subtitle: "Warsztat | Wulkanizacja | Serwis | Wrocław",
         open: "Otwarte • Pracujemy",
         closed: "Zamknięte",
         opensMonday: "Otwarte w poniedziałek o 9:00",
         opensToday: "Otwarte dzisiaj o 9:00",
         opensTomorrow: "Otwarte jutro o 9:00",
-        servicesTitle: "Nasze usługi",
-        service1: "Pomoc drogowa",
-        service2: "Wulkanizacja / Opony",
+        servicesTitle: "Usługi",
+        service1: "Pomoc drogowa dla auta",
+        service2: "Usługi wulkanizacyjne",
         service3: "Diagnostyka serwisowa",
-        service4: "Przegląd techniczny",
+        service4: "Przeglądy techniczne",
         service5: "Diagnostyka komputerowa",
-        service6: "Nabijanie klimatyzacji",
+        service6: "Napełnianie klimatyzacji",
         addressTitle: "Adres",
-        addressText: "ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144",
-        contactsTitle: "Kontakty",
-        callBtn: "Zadzwoń",
-        telegramBtn: "Telegram",
-        instagramBtn: "Instagram",
-        menuServices: "Usługi",
-        menuAddress: "Adres",
-        menuContacts: "Kontakty"
+        contactsTitle: "Kontakty"
     },
     en: {
-        subtitle: "Car Service • Wroclaw",
-        open: "Open • Working",
+        subtitle: "Car Service | Tire Fitting | Wrocław",
+        open: "Open • Working now",
         closed: "Closed",
         opensMonday: "Opens Monday at 9:00 AM",
         opensToday: "Opens today at 9:00 AM",
         opensTomorrow: "Opens tomorrow at 9:00 AM",
-        servicesTitle: "Our Services",
-        service1: "Roadside Assistance",
-        service2: "Tire Service",
-        service3: "Service Diagnostics",
-        service4: "Maintenance",
-        service5: "Computer Diagnostics",
-        service6: "AC Recharge",
+        servicesTitle: "Services",
+        service1: "Roadside assistance",
+        service2: "Tire fitting services",
+        service3: "Service diagnostics",
+        service4: "Maintenance & repairs",
+        service5: "Computer diagnostics",
+        service6: "AC recharging",
         addressTitle: "Address",
-        addressText: "ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144",
-        contactsTitle: "Contacts",
-        callBtn: "Call Us",
-        telegramBtn: "Telegram",
-        instagramBtn: "Instagram",
-        menuServices: "Services",
-        menuAddress: "Address",
-        menuContacts: "Contacts"
+        contactsTitle: "Contacts"
     },
     cs: {
-        subtitle: "Autoservis • Vratislav",
+        subtitle: "Autoservis | Pneuservis | Vratislav",
         open: "Otevřeno • Pracujeme",
         closed: "Zavřeno",
         opensMonday: "Otevře se v pondělí v 9:00",
         opensToday: "Otevře se dnes v 9:00",
         opensTomorrow: "Otevře se zítra v 9:00",
-        servicesTitle: "Naše služby",
-        service1: "Silniční asistence",
+        servicesTitle: "Služby",
+        service1: "Silniční pomoc",
         service2: "Pneuservis",
         service3: "Servisní diagnostika",
         service4: "Technická údržba",
         service5: "Počítačová diagnostika",
         service6: "Plnění klimatizace",
         addressTitle: "Adresa",
-        addressText: "ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144",
-        contactsTitle: "Kontakty",
-        callBtn: "Zavolat",
-        telegramBtn: "Telegram",
-        instagramBtn: "Instagram",
-        menuServices: "Služby",
-        menuAddress: "Adresa",
-        menuContacts: "Kontakty"
+        contactsTitle: "Kontakty"
     },
     ru: {
-        subtitle: "Автосервис • Вроцлав",
+        subtitle: "СТО | Шиномонтаж | Автосервис | Вроцлав",
         open: "Открыто • Работаем",
         closed: "Закрыто",
         opensMonday: "Откроется в понедельник в 9:00",
         opensToday: "Откроется сегодня в 9:00",
         opensTomorrow: "Откроется завтра в 9:00",
-        servicesTitle: "Наши услуги",
-        service1: "Помощь на дороге",
-        service2: "Шиномонтаж",
-        service3: "Сервисная диагностика",
+        servicesTitle: "Услуги",
+        service1: "Быстрая помощь для авто",
+        service2: "Шиномонтажные услуги",
+        service3: "Сервисная діагностика",
         service4: "Техническое обслуживание",
         service5: "Компьютерная диагностика",
         service6: "Заправка кондиционера",
         addressTitle: "Адрес",
-        addressText: "ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144",
-        contactsTitle: "Контакты",
-        callBtn: "Позвонить",
-        telegramBtn: "Telegram",
-        instagramBtn: "Instagram",
-        menuServices: "Услуги",
-        menuAddress: "Адрес",
-        menuContacts: "Контакты"
+        contactsTitle: "Контакты"
     }
 };
 
 let currentLang = 'uk';
+
+// Change language function
+function changeLanguage(lang) {
+    if (!translations[lang]) return;
+    currentLang = lang;
+    
+    document.querySelectorAll('[data-translate]').forEach(el => {
+        const key = el.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            el.textContent = translations[lang][key];
+        }
+    });
+    updateWorkingStatus();
+}
 
 // Real-time Working Hours Checker with Polish Holidays & Multi-language Support
 function updateWorkingStatus() {
@@ -187,107 +166,65 @@ function updateWorkingStatus() {
     }
 }
 
-// Change language function
-function setLanguage(lang) {
-    if (!translations[lang]) return;
-    currentLang = lang;
-
-    // Update active class on language buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        if (btn.getAttribute('data-lang') === lang) {
-            btn.classList.add('active');
-        } else {
-            btn.classList.remove('active');
-        }
-    });
-
-    // Translate all elements with data-i18n attribute
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-            el.textContent = translations[lang][key];
-        }
-    });
-
-    updateWorkingStatus();
+// Global Toggle Menu function & Scroll Lock (Optimized for Mobile/Telegram/Samsung)
+function toggleMenu() {
+    const menu = document.getElementById('dropdownMenu');
+    const gearIcon = document.getElementById('gearIcon');
+    
+    if (menu) menu.classList.toggle('open');
+    if (gearIcon) gearIcon.classList.toggle('rotate');
+    
+    document.body.classList.toggle('menu-open', menu && menu.classList.contains('open'));
 }
 
-// Scroll to top function
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Smooth scroll to section with highlight effect
-function scrollToSection(sectionId) {
-    const section = document.getElementById(sectionId);
-    if (section) {
-        const headerOffset = 70;
-        const elementPosition = section.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-        window.scrollTo({
-            top: offsetPosition,
-            behavior: 'smooth'
-        });
-
-        // Add highlight animation class
-        section.classList.add('highlight-block');
+// Handler for menu items: close menu, scroll smoothly, highlight block for 3 seconds
+function handleMenuClick(blockId) {
+    toggleMenu();
+    
+    const block = document.getElementById(blockId);
+    if (block) {
+        document.querySelectorAll('.section-block').forEach(b => b.classList.remove('highlight-block'));
+        
+        block.classList.add('highlight-block');
+        
         setTimeout(() => {
-            section.classList.remove('highlight-block');
+            block.classList.remove('highlight-block');
         }, 3000);
     }
 }
 
-// DOMContentLoaded Event Listener
+// Scroll to top function when clicking brand logo
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Theme Toggle
+function toggleTheme() {
+    const html = document.documentElement;
+    const themeIcon = document.getElementById('themeIcon');
+    if (html.getAttribute('data-theme') === 'dark') {
+        html.setAttribute('data-theme', 'light');
+        if (themeIcon) themeIcon.className = 'fa-solid fa-sun';
+    } else {
+        html.setAttribute('data-theme', 'dark');
+        if (themeIcon) themeIcon.className = 'fa-solid fa-moon';
+    }
+}
+
+// Initialize on DOM load with touch support for Samsung/Telegram browsers
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Popup Menu Elements
-    const menuToggle = document.getElementById('menuToggle');
-    const popupMenu = document.getElementById('popupMenu');
-    const menuOverlay = document.getElementById('menuOverlay');
-    const closeMenuBtn = document.getElementById('closeMenu');
-
-    function toggleMenu() {
-        popupMenu.classList.toggle('active');
-        menuOverlay.classList.toggle('active');
-        document.body.classList.toggle('no-scroll');
-        menuToggle.classList.toggle('active');
-    }
-
-    if (menuToggle) menuToggle.addEventListener('click', toggleMenu);
-    if (closeMenuBtn) closeMenuBtn.addEventListener('click', toggleMenu);
-    if (menuOverlay) menuOverlay.addEventListener('click', toggleMenu);
-
-    // Menu item clicks
-    document.querySelectorAll('.popup-nav-link').forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            const targetId = link.getAttribute('href').substring(1);
-            toggleMenu();
-            setTimeout(() => {
-                scrollToSection(targetId);
-            }, 300);
-        });
-    });
-
-    // 2. Theme Toggle (Dark / Light)
-    const themeToggle = document.getElementById('themeToggle');
-    if (themeToggle) {
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('light-theme');
-            const isLight = document.body.classList.contains('light-theme');
-            themeToggle.textContent = isLight ? '🌙' : '☀️';
-        });
-    }
-
-    // 3. Language Switcher Buttons
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const lang = btn.getAttribute('data-lang');
-            setLanguage(lang);
-        });
-    });
-
-    // 4. Initialize working status & update every minute
     updateWorkingStatus();
     setInterval(updateWorkingStatus, 60000);
+
+    // Додатковий захист для кнопів у мобільних браузерах (touchend)
+    const gearBtn = document.getElementById('menuToggleBtn');
+    if (gearBtn) {
+        gearBtn.addEventListener('touchend', (e) => {
+            e.preventDefault();
+            toggleMenu();
+        });
+    }
 });
