@@ -162,7 +162,8 @@ function updateWorkingStatus() {
         if (p.type === 'hour') hour = parseInt(p.value, 10);
     });
 
-    const isWorkingDay = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].includes(weekday);
+    // Працюємо тільки з понеділка по п'ятницю (з 9:00 до 18:00). Субота і неділя — вихідні.
+    const isWorkingDay = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'].includes(weekday);
     const isWorkingHours = hour >= 9 && hour < 18;
 
     const statusDot = document.getElementById('statusDot');
