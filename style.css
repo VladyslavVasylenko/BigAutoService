@@ -128,9 +128,9 @@ body.menu-open {
     flex-direction: column;
     gap: 16px;
     opacity: 0;
-    pointer-events: none;
+    pointer-events: auto;
     transition: all 0.3s ease;
-    z-index: 101;
+    z-index: 999;
 }
 
 .dropdown-menu.open {
