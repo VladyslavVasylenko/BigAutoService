@@ -228,3 +228,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+/* ==========================================================
+   ДОДАТОК ДЛЯ ПК: Зміна креслень машин та перевірка ширини
+   ========================================================== */
+
+// Масив SVG-креслень машин (седан, ліфтбек, хетчбек, SUV, мінівен, бус)
+const carBlueprints = [
+    { type: 'sedan', svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2360a5fa" stroke-width="1.5"><path d="M3 16l2-5h14l2 5M5 16h14v2H5zM6 11l2-4h8l2 4M7 8h10"/></svg>' },
+    { type: 'liftback', svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2360a5fa" stroke-width="1.5"><path d="M2 16l3-6h14l3 6M4 16h16v2H4zM7 10l3-3h6l3 3"/></svg>' },
+    { type: 'hatchback', svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2360a5fa" stroke-width="1.5"><path d="M3 16l2-5h12l4 5M4 16h16v2H4zM6 11l2-3h7l2 3"/></svg>' },
+    { type: 'suv', svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2360a5fa" stroke-width="1.5"><path d="M3 15l2-6h14l2 6M3 15h18v3H3zM6 9l2-3h8l2 3"/></svg>' },
+    { type: 'minivan', svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2360a5fa" stroke-width="1.5"><path d="M2 15l2-7h16l2 7M2 15h20v3H2zM5 8l3-3h8l3 3"/></svg>' },
+    { type: 'van', svg: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%2360a5fa" stroke-width="1.5"><path d="M2 14l2-8h16l2 8M2 14h20v4H2zM5 6h14v3H5z"/></svg>' }
+];
+
+let currentCarIndex = 0;
+
+function rotateCarBlueprints() {
+    // Працює тільки на ПК, якщо екран ширший за 768px і контейнер існує
+    if (window.innerWidth <= 768) return;
+    
+    const container = document.getElementById('activeCarBlueprint');
+    if (!container) return;
+    
+    currentCarIndex = (currentCarIndex + 1) % carBlueprints.length;
+    container.innerHTML = carBlueprints[currentCarIndex].svg;
+}
+
+// Запускаємо зміну малюнків кожні 3.5 секунди
+document.addEventListener('DOMContentLoaded', () => {
+    const blueprintElement = document.getElementById('activeCarBlueprint');
+    if (blueprintElement) {
+        setInterval(rotateCarBlueprints, 3500);
+    }
+});
