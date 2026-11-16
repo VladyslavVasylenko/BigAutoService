@@ -3,32 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BigAutoService | СТО Вроцлав</title>
-    <!-- Favicon & App Icons -->
+    <title>BestAutoService | СТО Вроцлав</title>
     <link rel="icon" type="image/jpeg" href="1000048461.jpg">
     <link rel="apple-touch-icon" href="1000048461.jpg">
     <link rel="shortcut icon" type="image/jpeg" href="1000048461.jpg">
-    <!-- Fonts & Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="page-wrapper">
-        <!-- Top Navigation Bar (Fixed) -->
         <header class="top-nav">
             <div class="brand-mini" onclick="scrollToTop()" title="Наверх">
                 <img src="1000048461.jpg" alt="Logo">
-                <span>BigAutoService</span>
+                <span>BestAutoService</span>
             </div>
             <button class="gear-btn" id="menuToggleBtn" onclick="toggleMenu()" aria-label="Меню">
                 <i class="fa-solid fa-gear" id="gearIcon"></i>
             </button>
         </header>
 
-        <!-- Dropdown / Popup Menu (Gear) -->
         <div class="dropdown-menu" id="dropdownMenu">
             <div class="menu-header">
                 <span class="menu-title" data-translate="menuTitle">Навігація</span>
@@ -53,33 +48,25 @@
             </div>
         </div>
 
-        <!-- Main Content -->
         <main class="main-container">
-            <!-- Profile Card (Center) -->
-            <div class="card profile-card">
-                <div class="avatar-container">
-                    <img src="1000048461.jpg" alt="BigAutoService Logo" class="avatar-img">
+            <!-- Hero: профіль (+ креслення авто на ПК) -->
+            <div class="card hero-card">
+                <div class="profile">
+                    <div class="avatar-container">
+                        <img src="1000048461.jpg" alt="BestAutoService Logo" class="avatar-img">
+                    </div>
+                    <h1 class="profile-title">BestAutoService</h1>
+                    <p class="profile-subtitle" data-translate="subtitle">СТО | Шиномонтаж | Автосервіс | Вроцлав</p>
+                    <div class="status-badge" id="statusBadge">
+                        <span class="status-dot" id="statusDot"></span>
+                        <span id="statusText">...</span>
+                    </div>
                 </div>
-                <h1 class="profile-title">BigAutoService</h1>
-                <p class="profile-subtitle" data-translate="subtitle">СТО | Шиномонтаж | Автосервіс | Вроцлав</p>
-                
-                <!-- Live Status -->
-                <div class="status-badge" id="statusBadge">
-                    <span class="status-dot" id="statusDot"></span>
-                    <span id="statusText">Перевірка режиму...</span>
-                </div>
-            </div>
-
-                        <!-- Десктопний блок з анімацією креслень авто (працює тільки на ПК) -->
-            <div class="card desktop-blueprint-wrapper">
-                <span class="profile-subtitle">Auto Blueprint Live</span>
-                <div id="activeCarBlueprint">
-                    <!-- Сюди JS динамічно закидує SVG -->
+                <div class="blueprint-side" aria-hidden="true">
+                    <div id="activeCarBlueprint"></div>
                 </div>
             </div>
 
-
-            <!-- Services Section -->
             <section class="section-block" id="servicesBlock">
                 <h2 class="section-title" data-translate="servicesTitle">Послуги</h2>
                 <div class="services-list">
@@ -110,38 +97,37 @@
                 </div>
             </section>
 
-            <!-- Address Card -->
-            <section class="section-block" id="addressBlock">
-                <h2 class="section-title" data-translate="addressTitle">Адреса</h2>
-                <a href="https://maps.app.goo.gl/Ub26HhrePcHnyiev6" target="_blank" class="card address-card">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <div class="address-text">ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144</div>
-                </a>
-            </section>
+            <div class="bottom-row">
+                <section class="section-block" id="addressBlock">
+                    <h2 class="section-title" data-translate="addressTitle">Адреса</h2>
+                    <a href="https://maps.app.goo.gl/Ub26HhrePcHnyiev6" target="_blank" class="card address-card">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div class="address-text">ul. Wąska 8, Ligota Piękna, Wrocław, Poland 55-144</div>
+                    </a>
+                </section>
 
-            <!-- Quick Contacts -->
-            <section class="section-block" id="contactsBlock">
-                <h2 class="section-title" data-translate="contactsTitle">Контакти</h2>
-                <div class="action-buttons">
-                    <a href="tel:+48790295458" class="btn btn-primary">
-                        <i class="fa-solid fa-phone"></i> <span>+48 790 295 458</span>
-                    </a>
-                    <a href="https://t.me/+u0wQF_zzyqJmMDgy" target="_blank" class="btn btn-secondary">
-                        <i class="fa-brands fa-telegram"></i> <span>Telegram Chat</span>
-                    </a>
-                    <a href="https://www.instagram.com/wroclaw_sto.service" target="_blank" class="btn btn-secondary">
-                        <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
-                    </a>
-                </div>
-            </section>
+                <section class="section-block" id="contactsBlock">
+                    <h2 class="section-title" data-translate="contactsTitle">Контакти</h2>
+                    <div class="action-buttons">
+                        <a href="tel:+48790295458" class="btn btn-primary">
+                            <i class="fa-solid fa-phone"></i> <span>+48 790 295 458</span>
+                        </a>
+                        <a href="https://t.me/+u0wQF_zzyqJmMDgy" target="_blank" class="btn btn-secondary">
+                            <i class="fa-brands fa-telegram"></i> <span>Telegram Chat</span>
+                        </a>
+                        <a href="https://www.instagram.com/wroclaw_sto.service" target="_blank" class="btn btn-secondary">
+                            <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
         </main>
 
         <footer>
-            &copy; 2026 BigAutoService Wrocław. All rights reserved.
+            &copy; 2026 BestAutoService Wrocław. All rights reserved.
         </footer>
     </div>
 
-    <!-- Script File -->
     <script src="script.js"></script>
 </body>
 </html>
